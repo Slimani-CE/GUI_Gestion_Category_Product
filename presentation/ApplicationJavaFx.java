@@ -3,7 +3,9 @@ package ma.enset.app.presentation;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -17,10 +19,10 @@ public class ApplicationJavaFx extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        BorderPane root = FXMLLoader.load(getClass().getResource("view/produitsView.fxml"));
+        TabPane root = FXMLLoader.load(getClass().getResource("view/main.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("style/style.css").toString());
-        primaryStage.setTitle("Produits");
+        primaryStage.setTitle("Gestion");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
